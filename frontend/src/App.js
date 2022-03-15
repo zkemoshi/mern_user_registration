@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthState from './context/auth/AuthState';
 import PaymentState from './context/payment/PaymentState';
+import BackUrl from './pages/BackUrl';
 import Dashboard from './pages/Dashboard';
 import ForgotPassword from './pages/ForgotPassword';
 import Invoice from './pages/Invoice';
@@ -33,6 +34,7 @@ function App() {
                 <Route path='/' element={<Dashboard />} />
                 <Route path='/invoice' element={<Invoice />} />
                 <Route path='/remark' element={<Remark />} />
+                <Route path='/backurl' element={<BackUrl />} />
                 <Route path='/invoice-list' element={<InvoiceList />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />

@@ -2,6 +2,8 @@ const moment = require('moment');
 // DPO Credentials:
 const serviceType = 48629;
 const companyToken = 'EE5055EA-90F6-4212-A4DE-020DC6742CE0';
+const siteRedirect = 'https://tupohapa.herokuapp.com/remark'
+const BackURL = 'https://tupohapa.herokuapp.com/backurl'
 
 // Payment Template
 const dpoPaymentTemplate = {
@@ -12,8 +14,8 @@ const dpoPaymentTemplate = {
       PaymentAmount: '',
       PaymentCurrency: 'TZS',
       CompanyRef: '49FKEOA',
-      RedirectURL: 'https://www.lodge.co.tz/success',
-      BackURL: 'https://www.lodge.co.tz/offer',
+      RedirectURL: siteRedirect,
+      BackURL: BackURL,
       CompanyRefUnique: 0,
       PTL: 15,
       PTLtype: 'hours',

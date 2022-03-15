@@ -1,0 +1,4 @@
+Make Heroku Work
+  Go to Client folder
+    rm -rf .git
+    git rm --cached . -rf
