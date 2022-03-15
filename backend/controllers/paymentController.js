@@ -74,7 +74,7 @@ exports.createInvoice = async (req, res, next) => {
   // Sending Email after Registering
   sgMail.setApiKey(emailKey);
   const msg = {
-    to: [`zkemoshi@gmail.com`],
+    to: [`zkemoshi@gmail.com`, `${email}`],
     from: 'sales@lodge.co.tz',
     subject: `Invoice Notice`,
     html: `
