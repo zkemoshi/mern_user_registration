@@ -83,7 +83,7 @@ exports.createInvoice = async (req, res, next) => {
         <li>Price : ${price}</li>
       </ul>
       <p>
-        <a href='https://tupohapa.herokuapp.com/invoice?id=${transtoken}'>PAY NOW</a>
+        <a href='http://tupohapa.herokuapp.com/invoice?id=${transtoken}'>PAY NOW</a>
       </p>
     `,
   };
