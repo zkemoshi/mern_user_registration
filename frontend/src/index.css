@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.access-section {
+  height: 100vh;
+  display: flex;
+  max-width: 600px;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 60px;
+}
+
+.access-section .access-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.access-section .forgot-password {
+  color: blue;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li a:hover {
+  color: #777;
+}
+
+.header ul li a svg {
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+.logout {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout span,
+.logout .invoice-link {
+  cursor: pointer;
+  border: 1px sandybrown solid;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.logout span:hover,
+.logout .invoice-link:hover {
+  background-color: rgb(172, 144, 121);
+}
+.heading p {
+  color: #828282;
+}
+
+.goals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.goal {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 20px 0 10px;
+  position: relative;
+}
+
+.goal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.form,
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+/* Invoice */
+.invoice-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.invoice-group input,
+.invoice-group textarea,
+.invoice-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+.invoice-header {
+  background-color: #ccc;
+  margin-bottom: 3rem;
+}
+.address {
+  text-align: left;
+}
+
+.invoice-content {
+  text-align: left;
+  margin-top: 3rem;
+  border-top: #000 2px solid;
+  border-bottom: #000 2px solid;
+  padding-top: 1rem;
+}
+
+.invoice-content .service {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.invoice-content .tax {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.invoice-content .discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.invoice-content .total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-top: #000 2px solid;
+  font-weight: 600;
+}
+
+.invoice-content .total .item {
+  margin-right: 2rem;
+}
+
+.invoice-pay {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invoice-footer {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 20px 0;
+  padding: 0 10px;
+  background-color: #ccc;
+}
+/* End Invoice */
+
+/* Remark page */
+.remark {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(243, 239, 239);
+}
+
+.remark-card {
+  background-color: #fff;
+  font-size: medium;
+  border-radius: 1rem;
+}
+/* End remark Page */
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-sign {
+  background-color: #fff;
+  color: #777;
+  border: 1px solid #777;
+  padding: 5px 10px;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn-reverse {
+  background: #fff;
+  color: #000;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading h2 {
+    font-size: 1rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+  .content {
+    width: 100%;
+  }
+  .name-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 85px;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarNav {
+  width: 100%;
+  margin-top: 0.75rem;
+  overflow-y: hidden;
+}
+
+.navbarListItems {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbarListItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbarListItemName,
+.navbarListItemNameActive {
+  margin-top: 0.25rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8f8f8f;
+}
+.navbarListItemNameActive {
+  color: #2c2c2c;
+}
+
+/* Forgot Password */
+
+.password-reset main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.password-reset form {
+  padding: 10px;
+  width: 300px;
+}
+
+.password-reset .emailInput {
+  box-shadow: rgba(0, 0, 0, 0.11);
+  border: solid 1px #ccc;
+  background: #ffffff;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 100%;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.password-reset .forgotPasswordLink {
+  cursor: pointer;
+  color: #7dc79e;
+  font-weight: 600;
+  text-align: right;
+}
+.password-reset .forgotPasswordLink:hover {
+  border: 1px solid #7dc79e;
+  padding: 5px;
+  border-radius: 10px;
+}
+.password-reset button {
+  margin-top: 3rem;
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #3ce086;
+}
+.password-reset .signInText:hover {
+  border: solid 1px blue;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Table */
+.password-reset .invoice-list {
+  display: flex;
+  flex-direction: column;
+}
+.password-reset .invoice-list table {
+  text-align: left;
+}
+.password-reset .invoice-list .remove {
+  border: 1px solid red;
+  padding: 1px 2px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.password-reset .invoice-list .remove:hover {
+  background-color: rgb(235, 130, 130);
+}
+table td,
+table th {
+  padding: 5px;
+}
+table tr {
+  border-top: #8f8f8f 1px solid;
+}
