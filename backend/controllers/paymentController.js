@@ -118,11 +118,12 @@ exports.confirmInvoice = async (req, res, next) => {
   const payment = await Payment.findOne({ transtoken: req.params.token });
 
   // Update Status
-  await Payment.findByIdAndUpdate(
+  const updatedPyament = await Payment.findByIdAndUpdate(
     payment._id,
     { $set: { status: 'Paid' } },
     { new: true }
   );
+  res.status(200).json(updatedPyament);
 };
 
 // @desc      Delete a Invoice

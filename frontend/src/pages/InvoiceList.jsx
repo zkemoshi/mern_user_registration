@@ -4,7 +4,8 @@ import { toast } from 'react-toastify';
 import paymentContext from '../context/payment/paymentContext';
 
 function InvoiceList() {
-  const { invoices, getInvoices, deleteInvoice } = useContext(paymentContext);
+  const { invoices, getInvoices, deleteInvoice, current } =
+    useContext(paymentContext);
   let increment = 1;
 
   const remove = (id) => {
@@ -16,7 +17,7 @@ function InvoiceList() {
 
   useEffect(() => {
     getInvoices();
-  }, []);
+  }, [current]);
   return (
     <>
       <div className='password-reset container'>

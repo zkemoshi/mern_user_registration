@@ -70,12 +70,11 @@ const PaymentState = (props) => {
   // Confirm Payment after DPO
   const confirmInvoice = async (transtoken) => {
     try {
-      const res = await axios.get(`/api/v1/confirm/${transtoken}`);
+      const res = await axios.get(`/api/v1/payments/confirm/${transtoken}`);
       dispatch({
         type: CONFIRM_INVOICE,
         payload: res.data,
       });
-      console.log(res.data);
     } catch (error) {
       dispatch({
         type: INVOICE_ERROR,
