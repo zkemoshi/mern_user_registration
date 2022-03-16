@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react';
 import moment from 'moment';
 import { toast } from 'react-toastify';
 import Spinner from '../components/Spinner';
+import InvoiceCancel from '../components/InvoiceCancel';
 
 // Get Query Params
 const queryParams = new URLSearchParams(window.location.search);
@@ -15,7 +16,6 @@ function Invoice() {
   useEffect(() => {
     if (localStorage.getItem('localToken')) {
       const token = localStorage.getItem('localToken');
-      console.log(token);
       getInvoice(token);
     }
   }, []);
@@ -33,6 +33,9 @@ function Invoice() {
 
   if (loading) {
     return <Spinner />;
+  }
+  if (!current) {
+    return <InvoiceCancel />;
   }
 
   return (

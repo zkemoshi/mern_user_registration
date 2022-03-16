@@ -58,7 +58,7 @@ function InvoiceList() {
                     <td>{invoice.status}</td>
                     <td>22/02/2022</td>
                     <td className='remove' onClick={() => remove(invoice)}>
-                      {invoice.status === 'Attempt' ? 'Removed' : 'Done'}
+                      {invoice.status === 'Attempt' ? 'Remove' : 'Done'}
                     </td>
                   </tr>
                 ))}
