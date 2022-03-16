@@ -8,9 +8,11 @@ function InvoiceList() {
     useContext(paymentContext);
   let increment = 1;
 
-  const remove = (id) => {
+  const remove = (invoice) => {
+    const { status, _id } = invoice;
+    if (status === 'Paid') return;
     if (window.confirm('Confirm Delete..?')) {
-      deleteInvoice(id);
+      deleteInvoice(_id);
       toast.error('Invoice deleted..');
     }
   };
@@ -55,8 +57,8 @@ function InvoiceList() {
                     </td>
                     <td>{invoice.status}</td>
                     <td>22/02/2022</td>
-                    <td className='remove' onClick={() => remove(invoice._id)}>
-                      Remove
+                    <td className='remove' onClick={() => remove(invoice)}>
+                      {invoice.status === 'Attempt' ? 'Removed' : 'Done'}
                     </td>
                   </tr>
                 ))}
