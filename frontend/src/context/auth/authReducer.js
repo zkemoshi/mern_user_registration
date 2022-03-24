@@ -7,6 +7,9 @@ import {
   LOGIN_FAIL,
   LOGOUT,
   CLEAR_ERRORS,
+  FORGOT_PASSWORD,
+  RESET_PASSWORD,
+  PASSWORD_FAIL,
 } from '../types';
 
 export default function AuthReducer(state, action) {
@@ -40,6 +43,24 @@ export default function AuthReducer(state, action) {
         isAuthenticated: null,
         user: null,
         isAdmin: false,
+        loading: false,
+        error: action.payload,
+      };
+    case FORGOT_PASSWORD:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload.message,
+      };
+    case RESET_PASSWORD:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload.message,
+      };
+    case PASSWORD_FAIL:
+      return {
+        ...state,
         loading: false,
         error: action.payload,
       };

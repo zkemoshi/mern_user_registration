@@ -11,6 +11,7 @@ import InvoiceList from './pages/InvoiceList';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Remark from './pages/Remark';
+import ResetPassword from './pages/ResetPassword';
 import setAuthToken from './utils/setAuthToken';
 
 // Initiate token header...
@@ -39,6 +40,7 @@ function App() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
                 <Route path='/forgot-password' element={<ForgotPassword />} />
+                <Route path='/reset-password' element={<ResetPassword />} />
               </Routes>
             </div>
           </Router>

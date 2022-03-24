@@ -15,6 +15,10 @@ export const PASSWORD_SUCCESS = 'PASSWORD_SUCCESS';
 export const PASSWORD_FAIL = 'PASSWORD_FAIL';
 export const EMAIL_SUCCESS = 'EMAIL_SUCCESS';
 export const EMAIL_FAIL = 'EMAIL_FAIL';
+export const FORGOT_PASSWORD = 'FORGOT_PASSWORD';
+export const RESET_PASSWORD = 'RESET_PASSWORD';
+
+
 
 // set loading
 export const SET_LOADING = 'SET_LOADING';

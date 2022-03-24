@@ -1,14 +1,26 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import authContext from '../context/auth/authContext';
 
 function ForgotPassword() {
+  const { forgotPassword, error, clearErrors } = useContext(authContext);
   const [email, setEmail] = useState('');
 
   const onChange = (e) => setEmail(e.target.value);
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    forgotPassword({ email });
+    setEmail('');
   };
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+      clearErrors();
+    }
+  }, [error]);
 
   return (
     <div className='password-reset container'>
